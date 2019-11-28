@@ -661,12 +661,12 @@ header {
   background-color: white;
 }
 
-.hero-title-wrapper {
+.title-wrapper {
   height: 50px;
   margin-top: 24px;
 }
 
-#home_lion_title {
+#home_title {
   font-size: 28px;
   line-height: 33px;
   letter-spacing: 0.005em;
@@ -3272,6 +3272,9 @@ div{
     justify-content: space-between;
     width: 100%;
   }
+  .mob_logo{
+    margin-right: 5%;
+  }
   .dropdown_container {
     display: none;
     flex-direction: column;
@@ -3955,6 +3958,12 @@ div{
 @media only screen and (max-width: 450px) {
   .main_top_wrapper .big {
     font-size: 16px;
+  }
+  #home_title {
+    font-size: 16px;
+  }
+  .title-wrapper {
+    margin-top: 15px;
   }
   .xxx1, .xxx2, .xxx2_2, .xxx3, .xxx4, .xxx5, .xxx6, .xxx7, .xxx8, .xxx9 {
     margin: 0;

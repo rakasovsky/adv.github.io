@@ -140,7 +140,7 @@ jQuery(document).ready(function($){
     };
     $('.menu_category').on({
         'click': function(){
-            let catName = this.attr('data-category');
+            let catName = $(this).attr('data-category');
             let data = catList[catName];
             $('.change-image').attr('src', data.src);
             $('.menu_subcategory').html(generateHtml(data.links))
