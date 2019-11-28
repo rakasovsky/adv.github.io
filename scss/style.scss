@@ -196,7 +196,7 @@ input:focus, select:focus, textarea:focus {
 .t_btn:hover{
   cursor: pointer;
 }
-.t_btn:hover::after{
+.t_btn:hover::after, .post_link:hover::after{
   left: 10px;
   transition: all 500ms;
 }
@@ -515,7 +515,7 @@ header {
   top: -100px;
 }
 .nav-down {
-  background-color: #171717;
+  background-color: transparent;
 }
 .logo:hover {
   color: #e9150b;
@@ -805,6 +805,7 @@ header {
     display: flex;
     .why_container{
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -812,6 +813,10 @@ header {
       width: 360px;
       height: 312px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+
+      img{
+        margin-bottom: 35px;
+      }
     }
   }
 }
@@ -1121,68 +1126,7 @@ height: 200px;
   }
 
 }
-  .team {
-    height: 380px;
-    width: 375px;
-    background-image: url("../src/img/img/aidra.jpg");
-    background-size:cover;
-    overflow: hidden;
-    position: relative;
 
-  }
-
-  .team .team_hover
-  {
-
-    position: absolute;
-    z-index: 1000;
-    top:0;left:0;right:0;bottom:0;
-
-  }
-  .team:hover .team_hover
-  {
-    background: linear-gradient(164.44deg, #FF5B00 11.01%, #F4511E 46.15%, #FD3304 79.37%, #E9150B 99.23%);
-    transition: all 0.7s;
-    opacity: 0.9;
-  }
-  .team .team_name
-  {
-    position: absolute;
-    text-transform: uppercase;
-    padding: 7px;
-    z-index: 1000;
-    top:50%;
-    left:-80%;
-    font-weight: bold;
-    font-size: 20px; width: 80%;
-    transition: all 0.7s;
-    span{
-      margin-left: 10%;
-    }
-  }
-  .team:hover .team_name
-  {
-     left:0;
-
-  }
-  .team .team_role
-  {
-    position: absolute;
-    padding: 5px;
-    z-index: 1000;
-    top: 62%;
-    right:-100%;
-    color:#ffffff;
-    font-weight: 300;
-    font-size: 16px;
-    width: 90%;
-    transition: all 0.7s;
-
-  }
-  .team:hover .team_role
-  {
-    right:0;
-  }
   //About Us Callback
 .about_us_callback {
   display: flex;
@@ -1922,8 +1866,12 @@ height: 200px;
       flex-basis: 33%;
       flex-direction: column;
       width: 450px;
+      max-height: 300px;
       margin: 2.5px 0;
 
+      img {
+        height: 100%;
+      }
       .p_overlay{
         display: flex;
         align-items: flex-end;
@@ -2277,6 +2225,7 @@ height: 200px;
   bottom: 0;
   left: 9px;
   display: inline-block;
+  transition: all 500ms;
 }
 // FOOTER
 

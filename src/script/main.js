@@ -30,6 +30,7 @@ jQuery(document).ready(function($){
 
             if(st + $(window).height() < $(document).height()) {
                 $('header').removeClass('nav-up').addClass('nav-down');
+                $('.nav-down').css('background-color','#171717');
                 $('.dropdown_wrapper').slideUp(500);
             }
         }
@@ -113,6 +114,38 @@ jQuery(document).ready(function($){
     })
 
     // Category/image switcher
+    const catList = {
+        btn_m: {
+            src:'src/img/blue.jpg',
+            links: {
+                'test1': 'Униформа',
+                'test2': 'Флисовые кофты',
+            }
+        },
+        btn_m1: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Объёмные буквы',
+                'test2': 'Вывески',
+            }
+        }
+    };
+    const generateHtml = function generateHtml(links) {
+        let keys = Object.keys(links);
+        let ali = keys.map(function(link) {
+            let title = links[link];
+            return '<li><a href="'+link+'">' + title + '</a></li>';
+        });
+        return '<ul>' + ali + '</ul>';
+    };
+    $('.menu_category').on({
+        'click': function(){
+            let catName = this.attr('data-category');
+            let data = catList[catName];
+            $('.change-image').attr('src', data.src);
+            $('.menu_subcategory').html(generateHtml(data.links))
+        }
+    });
 
 
     $('.menu_category_bnt1').on({
@@ -198,4 +231,30 @@ jQuery(document).ready(function($){
             $('.menu_subcategory').html('<ul><li>Лазерная резка</li><li>Лазерная гравировка</li><li>Дизайн</li><li>Маркетинг</li><li>3D - Печать</li><li>Плоттерная резка</li><li>Высотные работы</li><li>Изделия из фанеры</li><li>Вышивка</li><li>Шелкотрафаретная печать</li><li>Ультрафиолетовая печать </li><li>Оформление выставок </li></ul>');
         }
     });
+
+    // Img Lazyloading
+    const targets = document.querySelectorAll('img');
+
+    const lazyload = target => {
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                console.log('!!!');
+
+                if (entry.isIntersecting) {
+                    const  img = entry.target;
+                    const src = img.getAttribute('data-lazy');
+
+                    img.setAttribute('src', src);
+                    img.classList.add('fade');
+
+                    observer.disconnect();
+                }
+            });
+
+        });
+        io.observe(target)
+    };
+
+    targets.forEach(lazyload);
+
 });
