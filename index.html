@@ -8,6 +8,7 @@
     <script defer src="src/script/lazy.js"></script>
     <script defer src="src/script/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
 <!--HEADER-->
@@ -21,18 +22,18 @@
                         <div class="dropdown_wrapper">
                             <div class="menu_category">
                                 <ul>
-                                    <li class="m_li menu_category_bnt1"><a href="category-page.html">Брендированная одежда</a></li>
-                                    <li class="m_li menu_category" data-category="btn_m">Наружная реклама</li>
-                                    <li class="m_li menu_category" data-category="btn_m1">Широкоформатная печать</li>
-                                    <li class="m_li menu_category_bnt4">Оформление интерьеров</li>
-                                    <li class="m_li menu_category_bnt5">Сувенирная продукция</li>
-                                    <li class="m_li menu_category_bnt6">Полиграфия</li>
-                                    <li class="m_li menu_category_bnt7">Корпоративный стиль</li>
-                                    <li class="m_li menu_category_bnt8">Освещение</li>
-                                    <li class="m_li menu_category_bnt9">POS Материалы</li>
-                                    <li class="m_li menu_category_bnt10">Выставочные стенды</li>
-                                    <li class="m_li menu_category_bnt11">Эксклюзив</li>
-                                    <li class="m_li menu_category_bnt12">Дополнительные услуги</li>
+                                    <li class="menu_category_bnt1"><a href="category-page.html">Брендированная одежда</a></li>
+                                    <li class="menu_category" data-category="btn_m">Наружная реклама</li>
+                                    <li class="menu_category" data-category="btn_m1">Широкоформатная печать</li>
+                                    <li class="menu_category_bnt4">Оформление интерьеров</li>
+                                    <li class="menu_category_bnt5">Сувенирная продукция</li>
+                                    <li class="menu_category_bnt6">Полиграфия</li>
+                                    <li class="menu_category_bnt7">Корпоративный стиль</li>
+                                    <li class="menu_category_bnt8">Освещение</li>
+                                    <li class="menu_category_bnt9">POS Материалы</li>
+                                    <li class="menu_category_bnt10">Выставочные стенды</li>
+                                    <li class="menu_category_bnt11">Эксклюзив</li>
+                                    <li class="menu_category_bnt12">Дополнительные услуги</li>
                                 </ul>
                             </div>
                             <div class="menu_subcategory">
@@ -49,8 +50,14 @@
                     <li class="fs20 m_li"><a href="contacts.html" class="m_li">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="menu_tel">
-                <a href="tel://057 761 761 6" class="orange">057 761 761 6</a>
+            <div class="menu_tel phone_list hvr-icon-hang">
+                <span class="orange tel_t">057 761 761 6</span>
+                <i class="fa fa-chevron-down hvr-icon"></i>
+                <ul class="hidden phones">
+                    <li><a href="tel://093 761 761 6" class="orange">093 761 761 6</a></li>
+                    <li><a href="tel://096 761 761 6" class="orange">096 761 761 6</a></li>
+                </ul>
+                <!-- <a href="tel://057 761 761 6" class="orange">057 761 761 6</a> -->
             </div>
         </div>
        <div class="mob_menu">
@@ -105,8 +112,16 @@
                 <p class="bigger">Наши услуги</p>
             </div>
             <div class="main_top_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                <div class="exodus__ps-shape">
+                    <div class="exodus__ps-shape--triangle">
+                        <img class="exodus__ps-shape__svg" data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                    </div>
+                </div>
+                <div class="tri_little">
+                    <div class="triangle__figure--small">
+                        <img  data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="xxx1">
@@ -292,14 +307,26 @@
                     </ul>
                 </div>
                 <div class="menu_service_img">
-                    <img class="change-image" data-lazy="src/img/ABOUT.png" src="/" alt="Advance" />
+                    <img class="change-image animated fadeInUp" data-lazy="src/img/ABOUT.png" src="/" alt="Advance" />
                 </div>
             </div>
         </div>
         <div class="service_triangles">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+            <div>
+                <div class="triangle__figure--small">
+                    <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                </div>
+            </div>
+            <div>
+                <div class="triangle__figure--medium">
+                    <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                </div>
+            </div>
+            <div>
+                <div class="triangle__figure--large">
+                    <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                </div>
+            </div>
         </div>
     </div>
     <div class="main_service_bottom_container xxx4">
@@ -312,16 +339,16 @@
         <p class="why_we_slogan bigger_center">Почему ADVANCE</p>
     </div>
     <div class=why_we_wrapper>
-        <div class="why_container">
+        <div class="why_container animated fadeInUp">
             <img data-lazy="src/img/main/lamp.svg" src="/" alt="decoration">
             <p>Мы воплотим в жизнь<br>
                 замысел любой сложности</p>
         </div>
-        <div class="why_container">
+        <div class="why_container animated fadeInUp delay-500ms">
             <img data-lazy="src/img/main/clock.svg" src="/" alt="decoration">
-            <p>Мы всегда выполняем<br> заказы в срок</p>
+            <p>Мы всегда выполняем<br>заказы в срок</p>
         </div>
-        <div class="why_container">
+        <div class="why_container why_container animated fadeInUp delay-1000ms">
             <img data-lazy="src/img/main/piggy-bank.svg" src="/" alt="decoration">
             <p>Заказав рекламу у нас<br>
                 Вы существенно сэкономите</p>
@@ -370,9 +397,38 @@
     </div>
     <div class="main_our_works_img_wrapper">
         <div class="main_gallery">
-            <div class="gallery_item"><img data-lazy="src/img/main/best/1E1R1841.png" src="/" alt="Black Image" /></div>
-            <div class="gallery_item long"><img  data-lazy="src/img/main/best/IMG_0018.jpeg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_0405.png" src="/" alt="Black Image" /></div>
+            <div class="gallery_item">
+                <figure class="img-container">
+                    <img class="thumb" data-lazy="src/img/main/best/1E1R1841.png"  
+                    data-thumb="src/img/main/best/1E1R1841.png" 
+                    data-big="src/img/main/best/1E1R1841.png" 
+                    src="/" alt="Black Image" />
+                    <div class="img-container-bg"></div>
+                    <div class="gallery_hover">
+                        <h5>1111</h5>
+                        <p>olololo</p>
+                    </div>
+                </figure>
+            </div>
+            <div class="gallery_item long">
+                <figure class="img-container">
+                    <img class="thumb" data-lazy="src/img/main/best/IMG_0018.jpeg"  
+                    data-thumb="src/img/main/best/IMG_0018.jpeg" 
+                    data-big="src/img/main/best/IMG_0018.jpeg" 
+                    src="/" alt="Black Image" />
+                    <div class="img-container-bg"></div>
+                    <div class="gallery_hover">
+                        <h5>2222</h5>
+                        <p>a3a3a3</p>
+                    </div>
+                </figure>
+            </div>
+            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_0405.png" src="/" alt="Black Image" />
+                <div class="gallery_hover">
+                    <h5>333</h5>
+                    <p>olololo</p>
+                </div>
+            </div>
             <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_0991.jpeg" src="/" alt="Black Image" /></div>
             <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_3366.jpg" src="/" alt="Black Image" /></div>
             <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_3937.jpg" src="/" alt="Black Image" /></div>
@@ -401,7 +457,7 @@
 <!--PORTFOLIO-->
 <section class="main_our_works xxx5">
     <div>
-        <div class="why_we_slogan bigger_center"><span class="adv_btn"><link  href="#" >Портфолио</span></div>
+        <div class="why_we_slogan bigger_center"><div class="adv_btn"><span><a href="#" >Портфолио</a></span></div></div>
     </div>
 </section>
 <!--FOOTER-->
@@ -436,7 +492,6 @@
                                 <label for="f_message">Сообщение</label>
                                 <textarea id="f_message" rows="5" cols="33"></textarea>
                             </div>
-<!--                            <button type="submit"  class="adv_btn fs20 f_btn btn4">Отправить</button>-->
                             <button type="submit"  class="btn-2"><span>Отправить</span></button>
                         </form>
                     </div>
@@ -446,13 +501,17 @@
                 </div>
             </div>
             <div class="footer_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                <img data-lazy="src/img/footer/Triangle.svg" class="orbit" src="/" alt="decoration">
+                <img data-lazy="src/img/footer/Triangle.svg" class="orbit_rev" src="/" alt="decoration">
             </div>
         </div>
         <div class="footer_top_right">
             <div class="footer_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                <div class="exodus__ps-shape">
+                    <div class="exodus__ps-shape--triangle">
+                        <img class="exodus__ps-shape__svg" data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                    </div>
+                </div>
             </div>
             <div class="footer_contacts">
                 <div class="f_contacts">
@@ -517,7 +576,7 @@
             </div>
             <div>
                 <div class="footer_copyright">
-                    <p class="r">Copyright &copy; 2019-2020 ADVANCE. All rights reserved</p>
+                    <p class="r">Copyright &copy; 2020 ADVANCE. All rights reserved</p>
                 </div>
             </div>
         </div>
@@ -533,10 +592,13 @@
         </div>
     </div>
     <div class="footer_mobile_copy">
-        <p>Copyright &copy; 2019-2020 ADVANCE.<br> All rights reserved</p>
+        <p>Copyright &copy; 2020 ADVANCE.<br> All rights reserved</p>
     </div>
 </footer>
 <script>
+
+
+// RUNNING TITLE
     var replaceText = {
         $text_container: null,
         replace_delay: 1000,
@@ -605,6 +667,52 @@
 
         animateText();
 
-    });</script>
+    });
+    
+
+
+
+    // IMG ZOOM EFFECT
+    (() => {
+	const IMAGES = document.querySelectorAll(".thumb");
+	let imageActive = false;
+	let normalImage;
+	let bigImage;
+
+	IMAGES.forEach(image =>
+		image.addEventListener("click", () => {
+			handleImage(image);
+		})
+	);
+
+	const handleImage = image => {
+		if (!imageActive) openImage(image);
+		else if (imageActive) closeImage(image);
+	};
+
+	const openImage = image => {
+		imageActive = true;
+		setImageSrc(image);
+		image.parentNode.classList.add("is-active");
+	};
+
+	const closeImage = image => {
+		imageActive = false;
+		setImageSrc(image);
+		image.parentNode.classList.remove("is-active");
+	};
+
+	const setImageSrc = image => image.setAttribute("src", getImageSrc(image));
+
+	const getImageSrc = image => {
+		let normalImage = image.getAttribute("data-thumb");
+		let bigImage = image.getAttribute("data-big");
+
+		if (imageActive) return bigImage;
+		else if (!imageActive) return normalImage;
+	};
+    })();
+
+    </script>
 </body>
 </html>

@@ -47,6 +47,12 @@ jQuery(document).ready(function($){
         }
     });
 
+    $('.menu_tel').on({
+        'click': function(){
+            $('.phones').toggle(100).css('visibility', 'visible');
+            // $('.tel_t').toggle();
+        }
+    });
 
     // Header dropdown hide
     // $(function ($) {
@@ -113,7 +119,7 @@ jQuery(document).ready(function($){
         $vcont.slideToggle(500);
     })
 
-    // Category/image switcher
+    // Category/Image switcher
     const catList = {
         // Брендированная одежда
         btn_m: {
@@ -228,7 +234,7 @@ jQuery(document).ready(function($){
             }
         },
         // Освещение
-        btn_m6: {
+        btn_m7: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Люстры',
@@ -238,7 +244,7 @@ jQuery(document).ready(function($){
             }
         },
         // POS Материалы
-        btn_m7: {
+        btn_m8: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Топперы',
@@ -251,7 +257,7 @@ jQuery(document).ready(function($){
             }
         },
         // Выставочные стенды
-        btn_m8: {
+        btn_m9: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Портативный стенд ROLL-UP',
@@ -267,7 +273,7 @@ jQuery(document).ready(function($){
             }
         },
         // Эксклюзив
-        btn_m9: {
+        btn_m10: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Изготовление мебели из металла и дерева',
@@ -278,7 +284,7 @@ jQuery(document).ready(function($){
             }
         },
         // Дополнительные услуги
-        btn_m10: {
+        btn_m11: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Лазерная резка',
@@ -305,11 +311,12 @@ jQuery(document).ready(function($){
         return '<ul>' + ali.join('') + '</ul>';
     };
     $('.menu_category').on({
-        'click': function(){
+        'mouseover': function(){
             let catName = $(this).attr('data-category');
             let data = catList[catName];
             $('.change-image').attr('src', data.src);
-            $('.menu_subcategory').html(generateHtml(data.links))
+            $('.menu_subcategory').html(generateHtml(data.links));
+            $(this).toggleClass('arrowRight');
         }
     });
 
@@ -423,4 +430,31 @@ jQuery(document).ready(function($){
 
     targets.forEach(lazyload);
 
+    // Rotate on scroll
+    var $animation_elements = $('.rtt');
+    var $window = $(window);
+
+    function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($animation_elements, function() {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            //check to see if this current container is within viewport
+            if ((element_bottom_position >= window_top_position) &&
+                (element_top_position <= window_bottom_position)) {
+                $element.addClass('in-view');
+            } else {
+                $element.removeClass('in-view');
+            }
+        });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
 });
