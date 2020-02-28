@@ -93,8 +93,8 @@ body {
 }
 
 .hidden {
-  // display: none;
-  visibility: hidden;
+  display: none;
+  // visibility: hidden;
 }
 
 a{
@@ -1066,6 +1066,11 @@ header {
 }
 
 //MAIN SERVICE SECTION
+.main_service_wrapper {
+  display: flex;
+  
+}
+
 .service_wrapper{
   display: flex;
   color: white;
