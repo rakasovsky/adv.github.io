@@ -118,6 +118,23 @@
                         <li class="btn" onclick="openCategory(event,'c_test')">POS Материалы</li>
                     </ul>
             </div>
+            <div class="select mob_portfolio">
+                    <ul>
+                        <li values="1" class="option btn" onclick="openCategory(event,'c_brand')">Брендированная одежда</li>
+                        <li values="2" class="option btn" onclick="openCategory(event,'c_test')">Широкоформатная печать</li>
+                        <li values="3" class="option btn" onclick="openCategory(event,'c_exclusive1')">Сувенирная продукция</li>
+                        <li values="4" class="option btn">Корпоративный стиль</li>
+                        <li values="5" class="option btn">Наружная реклама</li>
+                        <li values="6" class="option btn">Оформление интерьеров</li>
+                        <li values="7" class="option btn">Полиграфия</li>
+                        <li values="8" class="option btn">Освещение</li>
+                        <li values="9" class="option btn">Выставочные стенды</li>
+                        <li values="10" class="option btn">Эксклюзив</li>
+                        <li values="11" class="option btn">Дополнительные Услуги</li>
+                        <li values="12" class="option btn">POS Материалы</li>
+                    </ul>
+            </div>
+            </div>
             <div class="works_container">
                 <div class="works_wrapper category" id="c_brand">
                     <div class="img_wrapper" onclick="openModal();currentSlide(1)">
@@ -256,10 +273,151 @@
             <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна.</p>
         </div>
         <div class="right">
+            <div class="o_bg"></div>
             <img data-lazy="src/img/portfolio/p1.png" src="/" alt="decoration">
+            <div class="w_lines"></div>
         </div>
     </div>
 </section>
+<!--FOOTER-->
+<footer>
+    <div class="footer_top">
+        <div class="footer_top_left">
+            <div class="footer_form_wrapper">
+                <div class="footer_form">
+                    <div class="form_container">
+                        <p class="bigger_center">Напишите нам</p>
+                        <p>Свяжитесь с нашими специалистами и получите консультацию по любому интересующему вас вопросу.
+                        </p>
+                    </div>
+                    <div class="form_container">
+                        <form>
+                            <div>
+                                <label for="f_theme">Тематика вашего обращения</label>
+                                <select id="f_theme">
+                                    <option value="value1">Значение 1</option>
+                                    <option value="value2" selected>Значение 2</option>
+                                    <option value="value3">Значение 3</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="f_name">Ваше имя</label><input id="f_name" type="text" >
+                            </div>
+                            <div>
+                                <label for="f_email">Электронная почта</label>
+                                <input type="email" id="f_email">
+                            </div>
+                            <div>
+                                <label for="f_message">Сообщение</label>
+                                <textarea id="f_message" rows="5" cols="33"></textarea>
+                            </div>
+                            <button type="submit"  class="btn-2"><span>Отправить</span></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer_form_border">
+
+                </div>
+            </div>
+            <div class="footer_triangles">
+                <img data-lazy="src/img/footer/Triangle.svg" class="orbit" src="/" alt="decoration">
+                <img data-lazy="src/img/footer/Triangle.svg" class="orbit_rev" src="/" alt="decoration">
+            </div>
+        </div>
+        <div class="footer_top_right">
+            <div class="footer_triangles">
+                <div class="exodus_container">
+                    <div class="exodus_triangle">
+                        <img class="triangle_shape" data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                    </div>
+                </div>
+            </div>
+            <div class="footer_contacts">
+                <div class="f_contacts">
+                    <span>
+                        <img data-lazy="src/img/footer/address.svg" src="/" alt="address">
+                    </span>
+                    <div>
+                        <p class="orange">Наш адрес</p>
+                        <p>Украина, Харьков</p>
+                        <p>ул.Клочковская, 192-A</p>
+                        <p>БЦ "МІСТО"</p>
+                        <p>офис №124</p>
+                        <p>61145</p>
+                    </div>
+                </div>
+                <div class="f_contacts">
+                     <span>
+                        <img data-lazy="src/img/footer/phones.svg" src="/" alt="phone">
+                    </span>
+                    <div>
+                        <p class="orange">Телефон</p>
+                        <p>Виктория Колесник:</p>
+                        <p><a href="tel://+380967617616">+38(096)761 761 6</a></p>
+                        <p>Игорь Шорох</p>
+                        <p><a href="tel://+380506625511">+38(050)662 551 1</a></p>
+                    </div>
+                </div>
+                <div class="f_contacts">
+                    <span>
+                       <img data-lazy="src/img/footer/telega.svg" src="/" alt="telegram">
+                    </span>
+                    <div>
+                        <p class="orange">Telegram</p>
+                        <p><a href="tel://+380937617616 ">+38(093)761 761 6</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_map">
+                <img data-lazy="src/img/black.jpg" src="/" alt="Black Image" />
+            </div>
+            <div class="f_mail">
+                <p>Мы всегда открыты к сотрудничеству с заказчиками, поставщиками материалов, производителями и рекламными агенствами. Отправьте нам запрос и мы свяжемся с вами в течении часа<br>
+                    <span><a href="mailto:advanced.kh.ua@gmail.com" class="orange">advanced.kh.ua@gmail.com</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div>
+            <p class="logo big">ADVANCE</p>
+        </div>
+        <div class="footer_menu">
+            <div>
+                <div class="footer_nav">
+                    <nav class="main_menu">
+                        <ul class="menu_ul">
+                            <li class="fs20">О нас</li>
+                            <li class="fs20">Портфолио</li>
+                            <li class="fs20">Новости</li>
+                            <li class="fs20">Контакты</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div>
+                <div class="footer_copyright">
+                    <p class="r">Copyright &copy; 2020 ADVANCE. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_social">
+            <div>
+                <p class="r">Подписывайся на нас</p>
+                <p class="r">в социальных сетях</p>
+            </div>
+            <div class="social_wrapper">
+                <span><a href="#"><img data-lazy="src/img/footer/insta.svg" src="/" alt="instagram icon"></a></span>
+                <span><a href="#"><img data-lazy="src/img/footer/linked.svg" src="/" alt="linkedin icon"></a></span>
+                <span><a href="#"><img data-lazy="src/img/footer/facebook.svg" src="/" alt="facebook icon"></a></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer_mobile_copy">
+        <p>Copyright &copy; 2020 ADVANCE.<br> All rights reserved</p>
+    </div>
+</footer>
+</body>
 <script>
     // Portfolio tabs
     function openCategory(evt, categoryName) {
@@ -312,138 +470,12 @@
         // dots[slideIndex-1].className += " active3";
         // captionText.innerHTML = dots[slideIndex-1].alt;
     }
+    //Mobile Select
+    $('.select ul li.option').click(function() {
+        $(this).siblings().addBack().children().remove();
+        var a = $(this).siblings().toggle();
+        $(this).parent().prepend(this);
+    })
 
 </script>
-<!--FOOTER-->
-<footer>
-    <div class="footer_top">
-        <div class="footer_top_left">
-            <div class="footer_form_wrapper">
-                <div class="footer_form">
-                    <div class="form_container">
-                        <p class="bigger_center">Напишите нам</p>
-                        <p>Свяжитесь с нашими специалистами и получите консультацию по любому интересующему вас вопросу.
-                        </p>
-                    </div>
-                    <div class="form_container">
-                        <form>
-                            <div>
-                                <label for="f_theme">Тематика вашего обращения</label>
-                                <select id="f_theme">
-                                    <option value="value1">Значение 1</option>
-                                    <option value="value2" selected>Значение 2</option>
-                                    <option value="value3">Значение 3</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="f_name">Ваше имя</label><input id="f_name" type="text" >
-                            </div>
-                            <div>
-                                <label for="f_email">Электронная почта</label>
-                                <input type="email" id="f_email">
-                            </div>
-                            <div>
-                                <label for="f_message">Сообщение</label>
-                                <textarea id="f_message" rows="5" cols="33"></textarea>
-                            </div>
-                            <button type="submit"  class="btn-2"><span>Отправить</span></button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer_form_border">
-
-                </div>
-            </div>
-            <div class="footer_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-            </div>
-        </div>
-        <div class="footer_top_right">
-            <div class="footer_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-            </div>
-            <div class="footer_contacts">
-                <div class="f_contacts">
-                    <span>
-                        <img data-lazy="src/img/footer/address.svg" src="/" alt="address">
-                    </span>
-                    <div>
-                        <p class="orange">Наш адрес</p>
-                        <p>Украина, Харьков</p>
-                        <p>ул.Мироносицкая, 88</p>
-                        <p>61023</p>
-                    </div>
-                </div>
-                <div class="f_contacts">
-                     <span>
-                        <img data-lazy="src/img/footer/phones.svg" src="/" alt="phone">
-                    </span>
-                    <div>
-                        <p class="orange">Телефон</p>
-                        <p>Виктория Колесник:</p>
-                        <p><a href="tel://+380967617616">+38(096)761 761 6</a></p>
-                        <p>Игорь Шорох</p>
-                        <p><a href="tel://+380506625511">+38(050)662 551 1</a></p>
-                    </div>
-                </div>
-                <div class="f_contacts">
-                    <span>
-                       <img data-lazy="src/img/footer/telega.svg" src="/" alt="telegram">
-                    </span>
-                    <div>
-                        <p class="orange">Telegram</p>
-                        <p><a href="tel://+30937617616 ">+3(093)761 761 6</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="contact_map">
-                <img data-lazy="src/img/black.jpg" src="/" alt="Black Image" />
-            </div>
-            <div class="f_mail">
-                <p>Мы всегда открыты к сотрудничеству с заказчиками, поставщиками материалов, производителями и рекламными агенствами. Отправьте нам запрос и мы свяжемся с вами в течении часа<br>
-                    <span><a href="mailto:advanced.kh.ua@gmail.com" class="orange">advanced.kh.ua@gmail.com</a></span>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="footer_bottom">
-        <div>
-            <p class="logo big">ADVANCE</p>
-        </div>
-        <div class="footer_menu">
-            <div>
-                <div class="footer_nav">
-                    <nav class="main_menu">
-                        <ul class="menu_ul">
-                            <li class="fs20">О нас</li>
-                            <li class="fs20">Портфолио</li>
-                            <li class="fs20">Новости</li>
-                            <li class="fs20">Контакты</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div>
-                <div class="footer_copyright">
-                    <p class="r">Copyright &copy; 2019-2020 ADVANCE. All rights reserved</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer_social">
-            <div>
-                <p class="r">Подписывайся на нас</p>
-                <p class="r">в социальных сетях</p>
-            </div>
-            <div class="social_wrapper">
-                <span><a href="#"><img data-lazy="src/img/footer/insta.svg" src="/" alt="instagram icon"></a></span>
-                <span><a href="#"><img data-lazy="src/img/footer/facebook.svg" src="/" alt="facebook icon"></a></span>
-            </div>
-        </div>
-    </div>
-    <div class="footer_mobile_copy">
-        <p>Copyright &copy; 2019-2020 ADVANCE.<br> All rights reserved</p>
-    </div>
-</footer>
-</body>
 </html>

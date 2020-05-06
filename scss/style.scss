@@ -1401,7 +1401,7 @@ li.menu_category:hover:after{
           width: 100%;
           max-width: 700px;
           height: auto;
-          transform: translate(15%, 50px);
+          transform: translate(13%, 50px);
 
         }
     }
@@ -1543,6 +1543,7 @@ li.menu_category:hover:after{
       }
     }
   }
+
 
 //ABOUT US PAGE
 
@@ -2168,6 +2169,10 @@ height: 200px;
   }
 }
 
+.mobile_our_works {
+  display: none;
+}
+
 
 // SUBCATEGORY
 .category_wrapper {
@@ -2324,6 +2329,10 @@ height: 200px;
         width: 93px;
         transform: rotate(45deg) translateY(40px);
       }
+    }
+
+    .mob_portfolio {
+      display: none;
     }
   }
   .tab_control_container {
@@ -2963,16 +2972,18 @@ margin-top: 150px;
   position: relative;
   height: 50%;
 
-  img {
+  iframe {
     position: relative;
     z-index: 1;
+    width: 600px;
+    height: 450px;
   }
 }
   .contact_map:after{
     content: "";
     position: absolute;
-    bottom: 0;
-    right: 50px;
+    bottom: -25px;
+    right: 85px;
     height: 262px;
     width: 262px;
     background: repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 12px);
@@ -3998,6 +4009,10 @@ align-items: center;
   .footer_form_border {
     width: 575px;
   }
+  footer .footer_top .footer_top_right .contact_map iframe {
+    width: 420px;
+    height: 300px;
+  }
 
 
   //Portfolio
@@ -4561,6 +4576,8 @@ align-items: center;
     margin: 3rem 3rem;
     //border: none;
   }
+
+
   .main_service_container .xxx1::after {
     border: none;
   }
@@ -4586,6 +4603,7 @@ align-items: center;
   }
   .xxx5 {
     margin: 0 3rem;
+    border-left: none;
   }
   .xxx1::before {
     display: none;
@@ -4649,6 +4667,21 @@ align-items: center;
     align-items: center;
   }
   //SERVICE
+  .service_wrapper .menu_category ul li {
+    position: relative;
+  }
+
+  //SERVICE IPAD TRIANGLES
+  .service_wrapper .menu_category ul li:after{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    margin-left: 10px;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #ffffff transparent transparent transparent;
+    transform: rotate(30deg);
+  }
   .main_service_wrapper .menu_service_img img {
     width: 300px;
   }
@@ -4732,6 +4765,12 @@ align-items: center;
   }
   footer .footer_bottom .footer_social div {
    margin-right:0;
+  }
+
+
+  footer .footer_top .footer_top_right .contact_map iframe {
+    width: 350px;
+    transform: translate(15px, -15px);
   }
 
   //PORTFOLIO
@@ -5174,8 +5213,21 @@ align-items: center;
 
     .dropdown_container{
       font-size: 16px;
-      margin: 20px 0;
+      margin: 10px 0;
     }
+  }
+
+  .mobile_category_menu ul li span {
+    position: relative;
+  }
+  .mobile_category_menu ul li span:after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    margin-left: 10px;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #ffffff transparent transparent transparent;
   }
   .menu_category, .menu_subcategory{
     display: none;
@@ -5327,7 +5379,7 @@ align-items: center;
   }
   footer .footer_top .footer_top_left .footer_form_wrapper .footer_form {
     width: 100%;
-    padding: 4rem 0;
+    padding: 1rem 0;
     background-color: #ffffff;
     margin-top: 0;
   }
@@ -5335,6 +5387,7 @@ align-items: center;
     padding: 2% 5%;
   }
   footer .footer_top .footer_top_left .footer_triangles {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -5349,11 +5402,27 @@ align-items: center;
   footer .footer_bottom .footer_social div p{
     padding-left: 25px;
   }
+  footer .footer_top .footer_top_right .footer_contacts .f_contacts {
+    margin: 12px 0;
+    width: 100%;
+  }
+  footer .footer_top .footer_top_right .contact_map iframe {
+    width: 100%;
+    transform: translate(0, 0);
+  }
   .f_btn {
     align-self: center;
   }
   .adv_btn {
     margin-top: 25px;
+    font-size: 16px;
+    padding: 15px 40px;
+  }
+  .btn-2 {
+    height: 45px;
+    max-width: 150px;
+    font-size: 16px;
+    align-self: center;
   }
 
   //ABOUT US
@@ -5456,7 +5525,7 @@ align-items: center;
     display: none;
   }
   .main_our_works {
-    margin-top: 65px;
+    margin-top: 40px;
   }
   .certificate_wrapper {
     padding-bottom: 55px;
@@ -5511,11 +5580,10 @@ align-items: center;
     background-color: black;
     color: white;
   }
+
   //Portfolio
   .portfolio_wrapper .tab_control_container {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+    display: none;
   }
 
   .wrapper-dropdown-3 {
@@ -5681,6 +5749,13 @@ align-items: center;
     }
   }
 
+  .works_container {
+    margin: 0 25px;
+  }
+  .works_container .works_wrapper .img_wrapper {
+   margin: 5px 0;
+  }
+
   //News
   .news_wrapper .subcategory_fix {
     display: flex;
@@ -5738,9 +5813,8 @@ align-items: center;
   .blog_wrapper .subcategory_fix {
     height: 27vh;
   }
+
   //Blog
-
-
   .blog .blog_top_container {
     justify-content: center;
   }
@@ -5760,6 +5834,10 @@ align-items: center;
     transform: translateX(-7px);
     top: -5px;
   }
+  .blog .blog_top_container .triangles img:last-child {
+    transform: translateY(0px);
+  }
+
   .blog_top_img_container::after {
     height: 171px;
     width: 171px;
@@ -5779,6 +5857,7 @@ align-items: center;
   .xxx9::before {
     display: none;
   }
+
   //Category
   .category_container .xxx1 {
     padding: 2rem 0;
@@ -5788,10 +5867,16 @@ align-items: center;
 
     .category_container {
       margin: 0 25px;
+
+      .slogan_wrapper {
+        margin: 0;
+      }
     }
   }
   .category_wrapper .slogan_wrapper .subcategory_list {
     align-self: auto;
+    flex-direction: column;
+    margin-top: 10px;
   }
   .category_wrapper .category_top_container .category_top_triangles img:first-child {
     transform: none;
@@ -5800,7 +5885,8 @@ align-items: center;
     top: 205px;
   }
   .category_wrapper .category_top_container .category_top_triangles {
-    bottom: -40px;
+      bottom: -90px;
+      right: -70px;
   }
   .category_container .service_triangles img:last-child {
     width: 40px;
@@ -5824,7 +5910,6 @@ align-items: center;
   }
   .category_wrapper .category_top_container {
     margin-bottom: 65px;
-    margin-left: 2em;
   }
   .category_wrapper .slogan_wrapper {
     position: relative;
@@ -5839,6 +5924,34 @@ align-items: center;
     height: 100%;
   }
 
+  .adb_slider {
+    display: none ;
+  }
+  .mobile_our_works {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      margin: 5px 25px;
+      img {
+        width: 100%;
+
+      }
+    }
+  }
+  .xxx7 .service_wrapper .menu_service_img::after {
+   bottom: -30px;
+  }
+
+  .category_fix {
+    .exodus_triangle {
+      display: none;
+    }
+  }
+  .category_fix2 {
+    height: 100%;
+  }
+
   .slogan_wrapper{
     margin: 0 25px;
   }
@@ -5849,8 +5962,8 @@ align-items: center;
     margin: 0;
   }
   .slogan_wrapper .subcategory_img_container div img {
-    width: 300px;
-    height: 205px;
+    width: 100%;
+    height: 210px;
   }
   .slogan_wrapper .subcategory_img_container::after {
     left: -50px;
@@ -5862,6 +5975,45 @@ align-items: center;
   .sub_service_wrapper {
     display: none;
   }
+
+  footer .footer_bottom .footer_social div:first-child {
+    margin-right: 50px;
+  }
+
+
+  // MOBILE PORTFOLIO SELECT
+
+  .portfolio_wrapper .portfolio .mob_portfolio {
+    display: block;
+    margin: 0 0.6em;
+  }
+
+  .portfolio_wrapper .modal-content {
+    width: 100%;
+  }
+
+  .select ul li.option {
+    //background-color: #DEDEDE;
+    box-shadow: 0 1px 0 #DEDEDE, 0 0 0 #DEDEDE;
+
+  }
+  .select ul li.option {
+    z-index: 1;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    display: none;
+    list-style: none;
+  }
+
+  .select ul li:first-child {
+    display: block;
+  }
+
+  .select ul li {
+    cursor: default;
+  }
+
 }
 
 @media only screen and (max-width: 414px) {
@@ -5943,8 +6095,8 @@ align-items: center;
     min-width: 320px;
   }
   .main_our_works {
-    margin-top: 65px;
-    margin-bottom: 65px;
+    margin-top: 50px;
+    //margin-bottom: 65px;
   }
   .blog .blog_top_container .triangles {
     display: none;
