@@ -5991,7 +5991,15 @@ align-items: center;
   .portfolio_wrapper .modal-content {
     width: 100%;
   }
-
+  .portfolio_wrapper .mySlides img{
+    height: 100vh!important;
+  }
+  .portfolio_wrapper .modal {
+    padding-top: 60px;
+  }
+  .portfolio_wrapper .close {
+    top: 10%;
+  }
   .select ul li.option {
     //background-color: #DEDEDE;
     box-shadow: 0 1px 0 #DEDEDE, 0 0 0 #DEDEDE;
